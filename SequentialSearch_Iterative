@@ -1,0 +1,21 @@
+procedure PencarianBeruntun (input a1, a2, ..., an : integer, x: integer, output idx : integer)
+Deklarasi
+k : integer
+ketemu : boolean   {bernilai true jika x ditemukan atau false jika x tidak ditemukan }
+Algoritma
+   k ← 1
+   ketemu ← false
+   while (k≤n) and (not ketemu) do
+       if ak = x then
+           ketemu ← true
+       else
+           k ← k + 1
+       endif
+   endwhile
+{k > n or ketemu}
+
+if ketemu then {x ditemukan}
+     idx ← k
+else
+     idx ← 0 {x tidak ditemukan}
+endif
