@@ -1,0 +1,16 @@
+function PencarianBiner (bin, L, n):
+Deklarasi
+Algoritma
+   mid = len(L) / 2
+   
+   if len(L) == 0 then
+        return false
+   else if n == L[mid] then
+           return true
+   else
+        if n > L[mid] then
+           return bin.PencarianBiner(L[mid+1], n)
+        else
+           return bin.PencarianBiner(L[mid], n)
+   endif
+endfunction
