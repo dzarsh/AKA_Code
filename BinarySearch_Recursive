@@ -1,16 +1,12 @@
-function PencarianBiner (bin, L, n):
-Deklarasi
-Algoritma
-   mid = len(L) / 2
-   
-   if len(L) == 0 then
+def PencarianBiner (bin, L, n):
+   if len(L) == 0:
         return false
-   else if n == L[mid] then
+   else:
+        mid = len(L) / 2
+        if n == L[mid]:
            return true
-   else
-        if n > L[mid] then
-           return bin.PencarianBiner(L[mid+1], n)
-        else
-           return bin.PencarianBiner(L[mid], n)
-   endif
-endfunction
+        else:
+            if n > L[mid]:
+                return bin.PencarianBiner(L[mid+1:], n)
+            else:
+                return bin.PencarianBiner(L[:mid], n)
